@@ -24,7 +24,12 @@
 }
 
 .btn.btn-primary {
-    --hue: 165;
-    --sat: 38%;
-    --initial-light: 50%;
+    --hue: var(--color-h-primary);
+    --sat: var(--color-s-primary);
+    --initial-light: var(--color-l-primary);
+}
+.btn.btn-secondary {
+    --hue: var(--color-h-secondary);
+    --sat: var(--color-s-secondary);
+    --initial-light: var(--color-l-secondary);
 }

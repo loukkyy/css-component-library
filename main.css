@@ -1,14 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, var(--bg-color-m10), var(--bg-color-20));
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    gap: .5rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  gap: 0.5rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  gap: 1rem;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer {
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  font-size: 1.5rem;
+  padding: 0.5em;
+}
+
+/*
+Primary, used for most text.
+Secondary, used for text which is lower in the visual hierarchy.
+Hint, used for text hints (such as those in text fields and labels).
+Disabled, used for text in disabled components and content.
+Icon, used for icons.
+On-surface, used for text that is on top of a surface background.
+On-secondary, used for text that is on top of a secondary background.
+On-primary, used for text that is on top of a primary background.
+*/
+[theme="theme1"] {
+  /* Background color */
+  --bg-background: linear-gradient(
+    0deg,
+    var(--bg-color-m10),
+    var(--bg-color-20)
+  );
+
+  /* Palette */
+  --color-h-primary: 165;
+  --color-s-primary: 38%;
+  --color-l-primary: 50%;
+
+  --color-h-secondary: 0;
+  --color-s-secondary: 100%;
+  --color-l-secondary: 71%;
+
+  --color-h-surface: 188;
+  --color-s-surface: 56%;
+  --color-l-surface: 23%;
+}
+[theme="theme2"] {
+  /* Background color */
+  --bg-background: linear-gradient(0deg, var(--bg-color), var(--bg-color-20));
+
+  /* Palette */
+  --color-h-primary: 50;
+  --color-s-primary: 100%;
+  --color-l-primary: 71%;
+
+  --color-h-secondary: 33;
+  --color-s-secondary: 100%;
+  --color-l-secondary: 91%;
+
+  --color-h-surface: 0;
+  --color-s-surface: 100%;
+  --color-l-surface: 71%;
+}
+:root {
+  --themecolor: var(--keppel);
+  --darkThemecolor: var(--midnightgreen);
+
+  --color-primary: hsl(
+    var(--color-h-primary),
+    var(--color-s-primary),
+    var(--color-l-primary)
+  );
+  --color-secondary: hsl(
+    var(--color-h-secondary),
+    var(--color-s-secondary),
+    var(--color-l-secondary)
+  );
+
+  --bg-color: hsl(
+    var(--color-h-surface),
+    var(--color-s-surface),
+    var(--color-l-surface)
+  );
+  --bg-color-m10: hsl(
+    var(--color-h-surface),
+    var(--color-s-surface),
+    calc(var(--color-l-surface) - 10%)
+  );
+  --bg-color-20: hsl(
+    var(--color-h-surface),
+    var(--color-s-surface),
+    calc(var(--color-l-surface) + 20%)
+  );
+
+  --keppel: hsl(165, 38%, 50%);
+  --midnightgreen: hsl(188, 56%, 23%);
+  --bittersweet: hsl(0, 100%, 71%);
+  --naplesyellow: hsl(50, 100%, 71%);
+  --blanchedalmond: hsl(33, 100%, 91%);
 }
