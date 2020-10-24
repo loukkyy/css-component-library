@@ -1,0 +1,55 @@
+.cards {
+  display: flex;
+  gap: 2rem;
+}
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 20vw;
+  border: 1px solid #585858;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+  transform-style: preserve-3d;
+}
+.card:hover {
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba (0, 0, 0, 0.2);
+}
+.card .title {
+  padding: 1rem 0;
+  transition: all 0.75s ease-out;
+}
+.card .sub-title {
+  padding: 0.5rem 0;
+  transition: all 0.75s ease-out;
+}
+.card .description {
+  text-align: justify;
+  color: #585858;
+  transition: all 0.75s ease-out;
+}
+.card .image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: center;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  transition: all 0.75s ease-out;
+}
+.image-smith {
+  background-image: url("images/agent_smith.jpg");
+}
+.image-neo {
+  background-image: url("images/neo.jpg");
+}
+body {
+  perspective: 500px;
+}
+.anim-container {
+  display: flex;
+  padding: 0.5rem;
+}
