@@ -26,7 +26,7 @@ nav {
   min-width: 100vw;
   font-size: 1.5rem;
   padding: 0.5em;
-  gap: 1rem;
+  gap: 2rem;
 }
 main {
   flex: 1;
@@ -43,6 +43,12 @@ footer {
   min-width: 100vw;
   font-size: 1.5rem;
   padding: 0.5em;
+}
+@media (max-width: 600px) {
+  nav {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
 }
 
 /*
