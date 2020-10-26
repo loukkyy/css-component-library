@@ -12,6 +12,8 @@ const btn = document.querySelector("#changeThemeBtn");
 function loadTheme() {
   const theme = localStorage.getItem("theme");
   if (theme != null) {
+    setTheme(theme);
+  } else {
     setTheme("theme1");
   }
 }
