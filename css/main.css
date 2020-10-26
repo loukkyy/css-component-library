@@ -19,19 +19,18 @@ body {
   align-items: center;
   min-height: 100vh;
   gap: 0.5rem;
-
-  --threshold: 60%;
-  --switch: calc((var(--color-l-surface) - var(--threshold)) * -100);
-  color: hsl(0, 0%, var(--switch));
+  --surface-color-l: var(--color-l-surface);
 }
-nav {
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  min-width: 100vw;
-  font-size: 1.5rem;
-  padding: 0.5em;
-  gap: 2rem;
+  width: 100vw;
+  padding: 1rem 2rem;
+  --surface-color-l: var(--color-l-primary);
+  --switch: calc((var(--color-l-primary) - var(--threshold)) * -100);
+  color: hsl(0, 0%, var(--switch));
+  background-color: var(--color-primary);
 }
 main {
   flex: 1;
@@ -41,6 +40,9 @@ main {
   align-items: center;
 }
 footer {
+  --surface-color-l: var(--color-l-primary);
+  --switch: calc((var(--color-l-primary) - var(--threshold)) * -100);
+  color: hsl(0, 0%, var(--switch));
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;
@@ -57,10 +59,19 @@ section {
   min-height: 30vh;
   padding: 1rem 2rem;
 }
-#changeThemeBtn {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
+.responsive-color {
+  --threshold: 60%;
+  --switch: calc((var(--surface-color-l) - var(--threshold)) * -100);
+  color: hsl(0, 0%, var(--switch));
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+}
+.intro img {
+  height: 4vh;
+  margin-right: 1rem;
 }
 .main-title {
   font-size: 3rem;
