@@ -5,6 +5,7 @@
 }
 .card {
   background-color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -35,7 +36,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: coral;
   border-radius: 50%;
   transition: transform 0.75s ease-out;
   height: 10rem;
@@ -43,10 +43,10 @@
   align-self: center;
 }
 .image-smith {
-  background-image: url("images/agent_smith.jpg");
+  background-image: url("../images/agent_smith.jpg");
 }
 .image-neo {
-  background-image: url("images/neo.jpg");
+  background-image: url("../images/neo.jpg");
 }
 body {
   perspective: 500px;

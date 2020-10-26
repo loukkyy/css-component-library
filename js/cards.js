@@ -2,7 +2,7 @@ const containers = document.querySelectorAll(".anim-container");
 
 containers.forEach((container) => {
   let card = container.getElementsByClassName("card")[0];
-  let top = card.getBoundingClientRect().top;
+  let top = card.getBoundingClientRect().top + window.scrollY;
   let left = card.getBoundingClientRect().left;
   let width = card.getBoundingClientRect().width;
   let height = card.getBoundingClientRect().height;

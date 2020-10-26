@@ -1,31 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" theme="theme2">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <link rel="stylesheet" type="text/css" href="buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/inputs.css" />
+    <link rel="stylesheet" type="text/css" href="css/cards.css" />
     <title>CSS Component Library</title>
   </head>
   <body>
     <header>
-      <nav>
-        <a href="./index.html"><button class="btn btn-primary">Home</button></a>
-        <a href="./buttons.html"
-          ><button class="btn btn-primary">Buttons</button></a
-        >
-        <a href="./inputs.html"
-          ><button class="btn btn-primary">Inputs</button></a
-        >
-        <a href="./cards.html"
-          ><button class="btn btn-primary">Cards</button></a
-        >
-      </nav>
+      <button class="btn btn-secondary" id="changeThemeBtn">
+        Change Theme
+      </button>
+      <h1 class="main-title">CSS Components Library</h1>
     </header>
     <main>
-      <h1>CSS Components Library</h1>
+      <section class="section-buttons">
+        <h2 class="section-title">Buttons</h2>
+        <div class="container">
+          <div class="category">
+            <h3>Standard</h3>
+            <button class="btn">Default</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+          </div>
+          <div class="category">
+            <h3>Animated</h3>
+            <button class="btn btn-primary shake">Shake</button>
+            <button class="btn btn-primary rise">Rise</button>
+            <button class="btn btn-primary jiggle">Jiggle</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-inputs">
+        <h2 class="section-title">Inputs</h2>
+        <div class="container">
+          <input class="input" type="text" value="Default" />
+          <input class="input input-success" type="text" value="Success" />
+          <input class="input input-error" type="text" value="Error" />
+          <input class="input input-large" type="text" value="Large" />
+          <input class="input input-small" type="text" value="Small" />
+          <input
+            class="input input-disabled"
+            type="text"
+            value="Disabled"
+            disabled
+          />
+        </div>
+      </section>
+      <section class="section-dropdowns">
+        <h2 class="section-title">Dropdowns</h2>
+        <div class="container">Coming soon...</div>
+      </section>
+
+      <section class="section-cards">
+        <h2 class="section-title">Cards</h2>
+        <div class="container cards">
+          <div class="anim-container">
+            <div class="card">
+              <div class="image image-smith"></div>
+              <div class="info">
+                <h1 class="title">Agent Smith</h1>
+                <h3 class="sub-title">Agent of the system</h3>
+                <p class="description">
+                  Every mammal on this planet instinctively develops a natural
+                  equilibrium with the surrounding environment; but you humans
+                  do not. Instead you multiply, and multiply, until every
+                  resource is consumed. The only way for you to survive is to
+                  spread to another area. There is another organism on this
+                  planet that follows the same pattern... a virus
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="anim-container">
+            <div class="card">
+              <div class="image image-neo"></div>
+              <div class="info">
+                <h1 class="title">Mr Anderson</h1>
+                <h3 class="sub-title">The Messiah</h3>
+                <p class="description">I know Kung Fu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-navbars">
+        <h2 class="section-title">Navbars</h2>
+        <div class="container">Coming soon...</div>
+      </section>
     </main>
     <footer>Servan Fichet - &copy; 2020</footer>
+    <script src="js/theme.js"></script>
+    <script src="js/cards.js"></script>
   </body>
 </html>
