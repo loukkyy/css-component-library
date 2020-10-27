@@ -20,6 +20,12 @@ On-primary, used for text that is on top of a primary background.
   /* Background color */
   --bg-background: linear-gradient(0deg, var(--bg-color), var(--bg-color-20));
 
+  /* Responsive color */
+  --threshold: 50%;
+  --switch: calc((var(--color-l-surface) - var(--threshold)) * -100);
+  --box-shadow-color: hsla(0, 0%, var(--switch), 0.2);
+  color: hsl(0, 0%, var(--switch));
+
   --color-primary: hsl(
     var(--color-h-primary),
     var(--color-s-primary),
