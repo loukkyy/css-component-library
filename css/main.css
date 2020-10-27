@@ -60,12 +60,16 @@ section {
   min-height: 30vh;
   padding: 1rem 2rem;
 }
-.responsive-color {
+.responsive-text-color {
   --threshold: 60%;
   --switch: calc((var(--surface-color-l) - var(--threshold)) * -100);
   color: hsl(0, 0%, var(--switch));
 }
-
+#changeThemeBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
 .intro {
   display: flex;
   align-items: center;

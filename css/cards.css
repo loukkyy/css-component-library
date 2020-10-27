@@ -4,56 +4,87 @@
   gap: 2rem;
 }
 .card {
-  background-color: white;
-  color: black;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   padding: 2rem;
   width: 20rem;
-  border: 1px solid #585858;
+  background-color: white;
+  border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s;
-  transform-style: preserve-3d;
+  transition: box-shadow 0.3s ease-out;
 }
 .card:hover {
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba (0, 0, 0, 0.2);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+.card .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 .card .title {
   padding: 1rem 0;
-  transition: transform 0.75s ease-out;
 }
 .card .sub-title {
   padding: 0.5rem 0;
-  transition: transform 0.75s ease-out;
 }
 .card .description {
   text-align: justify;
   color: #585858;
-  transition: transform 0.75s ease-out;
 }
 .card .image {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
-  transition: transform 0.75s ease-out;
   height: 10rem;
   width: 10rem;
-  align-self: center;
 }
-.image-smith {
-  background-image: url("../images/agent_smith.jpg");
+.image-zombie {
+  background-image: url("../images/zombie_avatar.svg");
 }
-.image-neo {
-  background-image: url("../images/neo.jpg");
+.image-sheep {
+  background-image: url("../images/sheep_avatar.svg");
 }
-body {
-  perspective: 500px;
+.image-sloth {
+  background-image: url("../images/sloth_avatar.svg");
 }
-.anim-container {
+.card-type {
+  margin-top: 2rem;
+  font-style: italic;
+}
+/* Classic */
+.card.classic {
+  background-color: var(--color-secondary);
+  /* color: black; */
+}
+.card.classic .description {
+  color: #585858;
+}
+/* Blend */
+.card.blend {
+  background-color: transparent;
+  border: none;
+}
+/* 3d effect */
+.container-3d {
   display: flex;
   padding: 0.5rem;
+  perspective: 1000px;
+  perspective-origin: center;
+}
+.container-3d .card {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+  transform-style: preserve-3d;
+}
+.container-3d .card .title,
+.container-3d .card .sub-title,
+.container-3d .card .description {
+  transition: transform 0.75s ease-out;
 }
 
 @media (max-width: 813px) {
