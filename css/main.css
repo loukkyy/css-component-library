@@ -8,10 +8,11 @@
 }
 html {
   background: rgb(2, 0, 36);
-  background: linear-gradient(0deg, var(--bg-color-m10), var(--bg-color-20));
+  background: var (--bg-color);
 }
 
 body {
+  background: linear-gradient(0deg, var(--bg-color-m10), var(--bg-color-20));
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -25,7 +26,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 1rem 2rem;
   --surface-color-l: var(--color-l-primary);
   --switch: calc((var(--color-l-primary) - var(--threshold)) * -100);
@@ -47,7 +48,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
+  min-width: 100%;
   font-size: 1.5rem;
   padding: 0.5em;
 }
@@ -100,4 +101,22 @@ section {
   .section-title {
     font-size: 1.4rem;
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px var(--bg-color-m10);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-10);
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-20);
 }

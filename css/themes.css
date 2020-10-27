@@ -41,6 +41,11 @@ On-primary, used for text that is on top of a primary background.
     var(--color-s-surface),
     calc(var(--color-l-surface) - 10%)
   );
+  --bg-color-10: hsl(
+    var(--color-h-surface),
+    var(--color-s-surface),
+    calc(var(--color-l-surface) + 10%)
+  );
   --bg-color-20: hsl(
     var(--color-h-surface),
     var(--color-s-surface),
