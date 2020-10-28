@@ -61,6 +61,7 @@ section {
   position: fixed;
   top: 1rem;
   right: 1rem;
+  z-index: 2;
 }
 .intro {
   display: flex;
